@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Klasifikasi Lingkungan Sosial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-container" id="loginPage">
+    <h2>Login Sistem</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-container hidden" id="mainPage">
+    <header>
+        <h1>Klasifikasi Lingkungan Sosial Berbasis AI</h1>
+        <p>Edukasi Sosial & Analisis Visual</p>
+    </header>
+
+    <!-- UPLOAD GAMBAR -->
+    <section class="upload-section">
+        <h2>Unggah Gambar Lingkungan Sosial</h2>
+        <input type="file" accept="image/*" onchange="previewImage(event)">
+        <img id="preview" alt="">
+        <button onclick="classify()">Klasifikasikan</button>
+        <div id="result"></div>
+    </section>
+
+    <!-- EDUKASI -->
+    <section class="education">
+        <h2>Edukasi Sosial</h2>
+        <p>
+            Sistem ini membantu mengenali kondisi lingkungan sosial seperti
+            <b>perkotaan padat</b>, <b>permukiman tertata</b>, atau
+            <b>lingkungan kurang layak</b> untuk mendukung kesadaran sosial
+            dan perencanaan pembangunan.
+        </p>
+    </section>
+
+    <!-- LOGOUT -->
+    <footer>
+        <button class="logout" onclick="logout()">Logout</button>
+        <p>© 2025 AI Lingkungan Sosial</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
