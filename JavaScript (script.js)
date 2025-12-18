@@ -1,0 +1,37 @@
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+    let msg = document.getElementById("loginMsg");
+
+    if (user === "admin" && pass === "12345") {
+        document.getElementById("loginPage").classList.add("hidden");
+        document.getElementById("mainPage").classList.remove("hidden");
+    } else {
+        msg.innerHTML = "Username atau password salah!";
+        msg.style.color = "red";
+    }
+}
+
+function logout() {
+    document.getElementById("mainPage").classList.add("hidden");
+    document.getElementById("loginPage").classList.remove("hidden");
+}
+
+function previewImage(event) {
+    let img = document.getElementById("preview");
+    img.src = URL.createObjectURL(event.target.files[0]);
+    img.style.display = "block";
+}
+
+function classify() {
+    let results = [
+        "Lingkungan Sosial Perkotaan Padat",
+        "Lingkungan Permukiman Tertata",
+        "Lingkungan Sosial Kurang Layak",
+        "Lingkungan Sosial Pedesaan"
+    ];
+
+    let randomResult = results[Math.floor(Math.random() * results.length)];
+    document.getElementById("result").innerHTML =
+        "Hasil Klasifikasi AI: <br>" + randomResult;
+}
