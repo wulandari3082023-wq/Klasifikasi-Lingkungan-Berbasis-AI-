@@ -1,24 +1,18 @@
 function login() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-    let msg = document.getElementById("loginMsg");
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("loginMessage");
 
-    if (user === "admin" && pass === "123") {
+    if (username === "admin" && password === "12345") {
         document.getElementById("loginPage").classList.add("hidden");
         document.getElementById("mainPage").classList.remove("hidden");
     } else {
-        msg.innerHTML = "Login gagal! Username atau password salah.";
-        msg.style.color = "red";
+        message.textContent = "Username atau password salah!";
+        message.style.color = "red";
     }
 }
 
 function logout() {
     document.getElementById("mainPage").classList.add("hidden");
     document.getElementById("loginPage").classList.remove("hidden");
-}
-
-function previewImage(event) {
-    let image = document.getElementById("previewImage");
-    image.src = URL.createObjectURL(event.target.files[0]);
-    image.style.display = "block";
 }
