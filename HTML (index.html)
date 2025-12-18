@@ -8,41 +8,42 @@
 <body>
 
 <!-- LOGIN PAGE -->
-<div class="login-box" id="loginPage">
+<div class="login-container" id="loginPage">
     <h2>Login Edukasi Sosial</h2>
     <input type="text" id="username" placeholder="Username">
     <input type="password" id="password" placeholder="Password">
     <button onclick="login()">Login</button>
-    <p id="loginMsg"></p>
+    <p id="loginMessage"></p>
 </div>
 
-<!-- MAIN PAGE -->
-<div class="container hidden" id="mainPage">
+<!-- MAIN CONTENT -->
+<div class="main-container hidden" id="mainPage">
     <header>
         <h1>Website Edukasi Sosial</h1>
-        <p>Membangun Kesadaran Sosial Melalui Media Digital</p>
+        <p>Meningkatkan Kesadaran & Kepedulian Sosial</p>
     </header>
 
-    <!-- UPLOAD IMAGE -->
-    <section class="upload">
-        <h2>Unggah Gambar Produk Sosial</h2>
-        <input type="file" accept="image/*" onchange="previewImage(event)">
-        <img id="previewImage">
+    <section class="content">
+        <h2>Apa itu Edukasi Sosial?</h2>
+        <p>
+            Edukasi sosial adalah upaya untuk membangun pemahaman masyarakat
+            terhadap nilai-nilai sosial, solidaritas, toleransi, dan
+            tanggung jawab bersama melalui media pendidikan dan digital.
+        </p>
     </section>
 
-    <!-- EDUKASI -->
-    <section class="education">
-        <h2>Edukasi Sosial</h2>
-        <p>
-            Edukasi sosial bertujuan untuk meningkatkan kepedulian masyarakat
-            terhadap lingkungan, ekonomi, dan kesejahteraan sosial melalui
-            pendekatan digital dan visual.
-        </p>
+    <section class="content">
+        <h2>Manfaat Edukasi Sosial</h2>
+        <ul>
+            <li>Meningkatkan kepedulian terhadap sesama</li>
+            <li>Mendorong perilaku positif di masyarakat</li>
+            <li>Membantu menciptakan lingkungan yang harmonis</li>
+        </ul>
     </section>
 
     <!-- LOGOUT -->
     <footer>
-        <button class="logout" onclick="logout()">Logout</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
         <p>© 2025 Edukasi Sosial</p>
     </footer>
 </div>
